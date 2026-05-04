@@ -108,7 +108,7 @@ function Header(props) {
             <Grid container spacing={12}>
               <Grid item xs={4}>
                 <Link to="/user" className="link">
-                  <Typography variant="h6">Vendor Cloud</Typography>
+                  <Typography variant="h6">NimbusCart</Typography>
                 </Link>
               </Grid>
               <Grid item xs={4}>

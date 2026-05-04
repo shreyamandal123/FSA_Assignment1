@@ -4,7 +4,7 @@ Our project aims to help provide small businesses with a platform to allow them 
 
 ## What our app does
 
-Vendor Cloud lets the small business owners register their shops on our virtual platform and gives them access to their inventory providing various features to add, edit, and delete products. In the dashboard, they can also view the orders placed by the customers.
+NimbusCart lets the small business owners register their shops on our virtual platform and gives them access to their inventory providing various features to add, edit, and delete products. In the dashboard, they can also view the orders placed by the customers.
 
 On the user side, our main component is a map that shows you all the local shops around you and lets you visit stores virtually. Placing orders and order history are components in the making.
 
@@ -14,7 +14,7 @@ We built this app using MERN Stack and used Material-UI library for UI designing
 
 ## What's next for VendorCloud
 
-We have big plans for Vendor Cloud. We will be working towards adding new features involving web scraping and making the app as user friendly as possible!
+We have big plans for NimbusCart. We will be working towards adding new features involving web scraping and making the app as user friendly as possible!
 
 ## Available Scripts
 

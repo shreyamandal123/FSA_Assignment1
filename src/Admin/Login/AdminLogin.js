@@ -102,7 +102,7 @@ class AdminLogin extends Component {
                   fontSize: "1.75rem",
                 }}
               >
-                Vendor Cloud
+                NimbusCart
               </Typography>
             </Grid>
           </Link>
