@@ -12,7 +12,7 @@ On the user side, our main component is a map that shows you all the local shops
 
 We built this app using MERN Stack and used Material-UI library for UI designing.
 
-## What's next for VendorCloud
+## What's next for NimbusCart
 
 We have big plans for NimbusCart. We will be working towards adding new features involving web scraping and making the app as user friendly as possible!
 
