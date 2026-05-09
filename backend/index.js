@@ -30,6 +30,7 @@ app.use(passport.initialize());
 app.use("/api/admin", require("./routes/api/admin"));
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/products", require("./routes/api/products"));
+app.use("/api/orders", require("./routes/api/orders"));
 app.use("/api/stores", require("./routes/api/stores"));
 
 require("./config/passport")(passport);

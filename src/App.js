@@ -2,9 +2,11 @@ import React from "react";
 import Admin from "./Admin/index";
 import Dashboard from "./Admin/Dashboard";
 import RegisterShop from "./Admin/RegisterShop";
+import Shops from "./Admin/Shops";
 import Inventory from "./Admin/Inventory";
 import User from "./User";
 import Cart from "./User/Cart";
+import Orders from "./User/Orders";
 import AdminLogin from "./Admin/Login/AdminLogin";
 import Login from "./User/Login/Login";
 import Register from "./User/Login/Register";
@@ -33,7 +35,6 @@ if (localStorage.jwtToken) {
   const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
-
     window.location.href = "./login";
   }
 }
@@ -44,34 +45,21 @@ function App() {
       <Router>
         <Switch>
           <AdminProtectedRoute exact path="/admin" component={Admin} />
-          <AdminProtectedRoute
-            path="/dashboard"
-            component={Dashboard}
-          ></AdminProtectedRoute>
-          <AdminProtectedRoute
-            path="/registershop"
-            component={RegisterShop}
-          ></AdminProtectedRoute>
+          <AdminProtectedRoute path="/dashboard" component={Dashboard} />
+          <AdminProtectedRoute path="/registershop" component={RegisterShop} />
+          <AdminProtectedRoute path="/shops" component={Shops} />
         </Switch>
         <Switch>
-          <AdminProtectedRoute
-            path="/inventory"
-            component={Inventory}
-          ></AdminProtectedRoute>
-          <UserProtectedRoute
-            path="/user"
-            component={User}
-          ></UserProtectedRoute>
-          <UserProtectedRoute
-            path="/cart"
-            component={Cart}
-          ></UserProtectedRoute>
+          <AdminProtectedRoute path="/inventory" component={Inventory} />
+          <UserProtectedRoute path="/user" component={User} />
+          <UserProtectedRoute path="/cart" component={Cart} />
+          <UserProtectedRoute path="/orders" component={Orders} />
         </Switch>
-        <Route path="/adminlogin" component={AdminLogin}></Route>
-        <Route path="/adminregister" component={AdminRegister}></Route>
-        <Route path="/login" component={Login}></Route>
-        <Route path="/register" component={Register}></Route>
-        <Route path="/store/:storeId" component={Store}></Route>
+        <Route path="/adminlogin" component={AdminLogin} />
+        <Route path="/adminregister" component={AdminRegister} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <Route path="/store/:storeId" component={Store} />
       </Router>
     </Provider>
   );

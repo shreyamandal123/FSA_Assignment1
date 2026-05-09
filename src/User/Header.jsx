@@ -21,6 +21,7 @@ import Logo from "../images/logo.png";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import AssignmentIcon from "@material-ui/icons/Assignment";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { logoutUser } from "../redux/auth/authActions";
@@ -95,7 +96,6 @@ function Header(props) {
         <StyledAppBar>
           <Toolbar>
             <Link to="/user" className="link">
-              {" "}
               <img
                 src={Logo}
                 alt="Logo"
@@ -105,13 +105,13 @@ function Header(props) {
               />
             </Link>
 
-            <Grid container spacing={12}>
-              <Grid item xs={4}>
+            <Grid container spacing={4} alignItems="center">
+              <Grid item xs={3}>
                 <Link to="/user" className="link">
                   <Typography variant="h6">NimbusCart</Typography>
                 </Link>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={3}>
                 <Button
                   color="inherit"
                   startIcon={<SearchIcon />}
@@ -120,23 +120,32 @@ function Header(props) {
                   Search by Category
                 </Button>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={2}>
                 <Link to="/cart" className="link">
                   <Button color="inherit" startIcon={<ShoppingCartIcon />}>
                     Cart
                   </Button>
                 </Link>
               </Grid>
+              <Grid item xs={2}>
+                <Link to="/orders" className="link">
+                  <Button color="inherit" startIcon={<AssignmentIcon />}>
+                    My Orders
+                  </Button>
+                </Link>
+              </Grid>
+              <Grid item xs={2}>
+                <Link to="/login" className="link">
+                  <Button
+                    color="inherit"
+                    startIcon={<ExitToAppIcon />}
+                    onClick={onLogoutClick}
+                  >
+                    Logout
+                  </Button>
+                </Link>
+              </Grid>
             </Grid>
-            <Link to="/login" className="link">
-              <Button
-                color="inherit"
-                startIcon={<ExitToAppIcon />}
-                onClick={onLogoutClick}
-              >
-                Logout
-              </Button>
-            </Link>
           </Toolbar>
         </StyledAppBar>
       </ElevationScroll>
@@ -181,6 +190,4 @@ function Header(props) {
   );
 }
 
-const mapStateToProps = (state) => ({});
-
-export default connect(mapStateToProps, { logoutUser, setCategory })(Header);
+export default connect(null, { logoutUser, setCategory })(Header);

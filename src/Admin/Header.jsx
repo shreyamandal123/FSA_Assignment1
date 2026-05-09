@@ -15,6 +15,7 @@ import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck";
 import StoreIcon from "@material-ui/icons/Store";
 import LayersIcon from "@material-ui/icons/Layers";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ListAltIcon from "@material-ui/icons/ListAlt";
 import "../App.css";
 import { Link } from "react-router-dom";
 import { logoutUser } from "../redux/auth/authActions";
@@ -48,7 +49,7 @@ const StyledAppBar = withStyles({
 })(AppBar);
 
 function Header(props) {
-  const onLogoutClick = (e) => {
+  const onLogoutClick = () => {
     props.logoutUser();
   };
 
@@ -59,35 +60,36 @@ function Header(props) {
         <StyledAppBar>
           <Toolbar>
             <Link to="/admin" className="link">
-              <img
-                src={Logo}
-                alt="Logo"
-                height="40rem"
-                width="40rem"
-                style={{ marginRight: "0.5rem" }}
-              />
+              <img src={Logo} alt="Logo" height="40rem" width="40rem" style={{ marginRight: "0.5rem" }} />
             </Link>
-            <Grid container spacing={10}>
-              <Grid item xs={3} inline>
+            <Grid container spacing={6}>
+              <Grid item xs={2}>
                 <Link to="/admin" className="link">
                   <Typography variant="h6">NimbusCart</Typography>
                 </Link>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={2}>
                 <Link to="/dashboard" className="link">
                   <Button color="inherit" startIcon={<PlaylistAddCheckIcon />}>
                     Dashboard
                   </Button>
                 </Link>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={2}>
                 <Link to="/registershop" className="link">
                   <Button color="inherit" startIcon={<StoreIcon />}>
                     Register Shop
                   </Button>
                 </Link>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={2}>
+                <Link to="/shops" className="link">
+                  <Button color="inherit" startIcon={<ListAltIcon />}>
+                    Manage Shops
+                  </Button>
+                </Link>
+              </Grid>
+              <Grid item xs={2}>
                 <Link to="/inventory" className="link">
                   <Button color="inherit" startIcon={<LayersIcon />}>
                     Inventory
@@ -96,11 +98,7 @@ function Header(props) {
               </Grid>
             </Grid>
             <Link to="/login" className="link">
-              <Button
-                color="inherit"
-                startIcon={<ExitToAppIcon />}
-                onClick={onLogoutClick}
-              >
+              <Button color="inherit" startIcon={<ExitToAppIcon />} onClick={onLogoutClick}>
                 Logout
               </Button>
             </Link>
@@ -112,6 +110,4 @@ function Header(props) {
   );
 }
 
-const mapStateToProps = (state) => ({});
-
-export default connect(mapStateToProps, { logoutUser })(Header);
+export default connect(null, { logoutUser })(Header);
