@@ -1,6 +1,6 @@
 ## Our Inspiration
 
-Our project aims to help provide small businesses with a platform to allow them to run their shops virtually. The inspiration behind this project was the current pandemic situation. In these times people hesitate to go to local stores like they used to before. To help the small businesses to recover from this loss, we have built an app that lets them run their shop online without any hassle whatsoever.
+Our project aims to help provide small businesses with a platform to allow them to run their shops virtually. The inspiration behind this project was the current pandemic situation. In these times people hesitate to go to local stores like they used to before. To help the small businesses to recover from this loss, I have built an app that lets them run their shop online without any hassle whatsoever.
 
 ## What our app does
 
@@ -10,11 +10,11 @@ On the user side, our main component is a map that shows you all the local shops
 
 ## Technologies used
 
-We built this app using MERN Stack and used Material-UI library for UI designing.
+I built this app using MERN Stack and used Material-UI library for UI designing.
 
 ## What's next for NimbusCart
 
-We have big plans for NimbusCart. We will be working towards adding new features involving web scraping and making the app as user friendly as possible!
+I have big plans for NimbusCart. I will be working towards adding new features involving Ib scraping and making the app as user friendly as possible!
 
 ## Available Scripts
 
